@@ -1,0 +1,8 @@
+<svg id="ico_hamburger_02_normal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="사각형_1595" data-name="사각형 1595" width="24" height="24" fill="none"/>
+  <g id="그룹_439" data-name="그룹 439" transform="translate(2 5.169)">
+    <line id="선_26" data-name="선 26" x2="20" fill="none" stroke="#222" stroke-width="1"/>
+    <line id="선_27" data-name="선 27" x2="20" transform="translate(0 5.866)" fill="none" stroke="#222" stroke-width="1"/>
+    <line id="선_28" data-name="선 28" x2="20" transform="translate(0 11.732)" fill="none" stroke="#222" stroke-width="1"/>
+  </g>
+</svg>

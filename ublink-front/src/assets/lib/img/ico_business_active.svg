@@ -1,0 +1,13 @@
+<svg id="ico_business_active" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="사각형_1585" data-name="사각형 1585" width="24" height="24" fill="none"/>
+  <g id="그룹_451" data-name="그룹 451" transform="translate(2 1)">
+    <g id="그룹_345" data-name="그룹 345">
+      <rect id="사각형_1495" data-name="사각형 1495" width="20" height="18" transform="translate(0 3)" stroke-width="1" stroke="#0097a7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <line id="선_5" data-name="선 5" x2="20" transform="translate(0 8)" fill="none" stroke="#0097a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_6" data-name="선 6" y2="5" transform="translate(5)" fill="none" stroke="#0097a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_7" data-name="선 7" y2="5" transform="translate(14)" fill="none" stroke="#0097a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_851" data-name="패스 851" d="M213.03,1052.074l-4.47,4.47-2.781-2.483" transform="translate(-198.991 -1039.772)" fill="none" stroke="#0097a7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+    <rect id="사각형_1568" data-name="사각형 1568" width="20" height="5" transform="translate(0 3.356)" fill="#0097a7"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg id="ico_institution_pharmacy" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="사각형_1650" data-name="사각형 1650" width="24" height="24" fill="none"/>
+  <g id="그룹_615" data-name="그룹 615" transform="translate(2 2)">
+    <path id="패스_2033" data-name="패스 2033" d="M1083.565,588.945l7.044-7.282,2.278,2.278-4.748,5" transform="translate(-1072.026 -581.663)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_2034" data-name="패스 2034" d="M1044,606.629a10.543,10.543,0,0,0,6.272,9.409v2.949h8.455v-2.949a10.544,10.544,0,0,0,6.272-9.409Z" transform="translate(-1044 -599.347)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="그룹_615-2" data-name="그룹 615" transform="translate(8.458 10.611)">
+      <line id="선_49" data-name="선 49" x2="4.083" transform="translate(0 2.042)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <line id="선_50" data-name="선 50" y1="4.083" transform="translate(2.042)" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="52" height="52" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Icon_Circle_Filled" data-name="Icon / Circle / Filled" opacity="0.5" clip-path="url(#clip-path)">
+    <rect id="Box" width="52" height="52" fill="none"/>
+    <path id="shape" d="M74-38A24.009,24.009,0,0,0,50-14,24.009,24.009,0,0,0,74,10,24.009,24.009,0,0,0,98-14,24.009,24.009,0,0,0,74-38Zm0,7.2a7.19,7.19,0,0,1,7.2,7.2A7.19,7.19,0,0,1,74-16.4a7.19,7.19,0,0,1-7.2-7.2A7.19,7.19,0,0,1,74-30.8ZM74,3.28A17.281,17.281,0,0,1,59.6-4.448c.072-4.776,9.6-7.392,14.4-7.392,4.776,0,14.328,2.616,14.4,7.392A17.281,17.281,0,0,1,74,3.28Z" transform="translate(-48 40)"/>
+  </g>
+</svg>

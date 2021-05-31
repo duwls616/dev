@@ -1,0 +1,150 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/*
+	서체
+*/
+.v-application, button, input, optgroup, select, textarea, .v-application .title {
+	font-family: Noto Sans KR, HelveticaNeue-Light,AppleSDGothicNeo-Light, 'Malgun Gothic', '맑은 고딕', sans-serif;
+}
+
+.txt-info {
+	font-size: 13px !important;
+	color: #999999 !important;
+}
+
+/*@ 로그인 페이지*/
+.login-header {
+	position: relative;
+	background: #00ACC1;
+	width: 100%;
+	height: 116px;
+	margin-bottom: 32px;
+	-webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.2);	
+}
+@media only screen and (min-width:768px){
+	.login-header {
+		height: 63px;
+		box-shadow: none;
+	}
+}
+.login-header .logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.login-body {
+	padding: 8px 30px;
+	margin-bottom: 100px;
+}
+
+@media only screen and (min-width:768px){
+	.login-body {
+		margin-left: 57px;
+		margin-right: 57px;
+	}
+}
+
+.login-body .col {
+	padding: 0;
+}
+.login-body .illust {
+	display: block;
+	margin: 0 auto 32px auto;
+}
+.login-body .v-input__slot {
+	min-height: 0 !important;
+}
+.login-body .v-text-field fieldset {
+	border: 2px solid #00ACC1;
+}
+.login-body .v-text-field .v-text-field__slot>input {
+	color: #00ACC1;
+}
+.login-body .v-text-field .v-label {
+	color: #999;
+	font-size: 14px;
+}
+.login-body .v-input--checkbox {
+	margin-top: 0;
+}
+.login-body .v-input--checkbox .v-icon {
+	color: #0097A7 !important;
+	caret-color: #0097A7 !important;	
+}
+.login-body .v-input--checkbox .v-label{
+	font-size: 13px;
+	color: #222;
+}
+.login-body .v-input--checkbox .v-messages{
+	display: none;
+}
+.login-body .btn-login {
+	font-weight: 500;
+	font-size: 15px
+}
+
+.login-body .v-input--checkbox .v-label {white-space: nowrap !important;}
+
+/*푸터*/
+.v-footer {
+	font-size: 11px;
+	font-weight: 300;
+	background: none !important;
+	color: #55555b !important;
+	margin-top: 25px;
+	margin-bottom: 50px;
+}
+.v-footer strong {
+	font-weight: 400 !important;
+}
+.v-footer .v-btn {
+	color: #55555b !important;
+	font-size: 11px;
+	font-weight: 400 !important;
+	margin: 0 !important;
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+	min-width: 0 !important;
+}
+/* .v-footer .v-btn:nth-of-type(1) { */
+	/* margin-right: 15px !important; */
+/* } */
+.v-footer .v-btn:nth-of-type(1):after {
+	content: "";
+	position: absolute;
+	top: 14px;
+	right: 0px;
+	width: 1px;
+	height: 10px;
+	background: #999;
+}
+.ubs-btn.ubs-btn-primary {
+	font-weight: 500;
+}
+/*알럿트*/
+.ubs-alert {
+	align-items: center;
+}
+.ubs-alert .v-card__text {
+	padding-top: 25px !important;
+	text-align: center;
+	line-height: 1.3;
+}
+.ubs-alert .v-card__text .txt-red{
+	color: #FF5656;
+}
+.ubs-alert .v-card__text .txt-black{
+	color: #222;
+}
+.ubs-alert .v-card__actions {
+	justify-content: center;
+	padding-bottom: 20px;
+}
+.ubs-alert .v-card__actions .v-btn{
+	width: 100px;
+	
+}
