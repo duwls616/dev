@@ -184,8 +184,8 @@
 
 <script>
 import '@/assets/lib/css/ubs.css';
-import BottomNavi from '@/views/components/layout/BottomNavi.vue';
-import LoginExtDialog from '@/views/components/layout/LoginExtDialog.vue';
+import BottomNavi from '@/views/components/BottomNavi.vue';
+import LoginExtDialog from '@/views/dialog/LoginExtDialog.vue';
 
 /*eslint-disable */
 export default {

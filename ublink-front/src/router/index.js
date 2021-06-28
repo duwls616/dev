@@ -7,7 +7,7 @@ import paths from './paths';
 Vue.use(VueRouter);
 
 function makeRoute(path, view, name, area, propMeta, propChildren) {
-  const areaURL = (area) ? 'views/layouts' : 'views/business';
+  const areaURL = (area) ? 'views/layouts' : 'views';
   return {
     name: name || view,
     path,
@@ -36,7 +36,6 @@ const router = new VueRouter({
 function movePage(to, from, next) {
   axios.post('/business/selectUserModel.do').then((rs) => {
     const clsRow = rs.data;
-    console.log(clsRow.returnCode);
     if (clsRow.returnCode === 'CERT_SUCCESS') {
       console.log(clsRow.returnCode);
       store.commit('setSubmitYn', 'N');
@@ -51,7 +50,12 @@ function movePage(to, from, next) {
 // (세션이 남아있을 경우) 메인 화면
 // (세션이 만료됐을 경우) 로그인 화면으로 이동
 router.beforeEach((to, from, next) => {
-  movePage(to, from, next);
+  if (to.path === '/') {
+    next('/login');
+  } else {
+    // 사용자 권한체크 후 Layout 구분 로직 들어가야 함
+    movePage(to, from, next);
+  }
 });
 
 router.afterEach(() => {

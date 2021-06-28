@@ -7,8 +7,7 @@
   >
     <v-btn v-for="(item, i) in bm.list" :key=i
       :class="{ 'd-none d-sm-flex' : item.isMobileHide }"
-      @click="naviBar(item.id)"
-      v-if="item.isShow">
+      @click="naviBar(item.id)" v-show="item.isShow">
       <v-badge
         v-if="item.hasBadge"
         color="red" dot offset-x="-4" offset-y="-15"
