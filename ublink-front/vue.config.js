@@ -1,6 +1,7 @@
 module.exports = {
-  publicPath: '/front',
-  outputDir: '../main/webapp/front/',
+  // 빌드 위치는 추 후 정의
+  // publicPath: '/front',
+  // outputDir: '../main/webapp/front/',
   pwa: {
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {

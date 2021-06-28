@@ -7,7 +7,7 @@ import paths from './paths';
 Vue.use(VueRouter);
 
 function makeRoute(path, view, name, area, propMeta, propChildren) {
-  const areaURL = (area) ? 'views/layouts' : 'views';
+  const areaURL = (area) ? 'views/layouts' : 'views/business';
   return {
     name: name || view,
     path,

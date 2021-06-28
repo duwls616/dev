@@ -7,7 +7,7 @@ function makeSubRoute(area, path, view, name, propMeta, props, redirect) {
     return {
       name: name || view,
       path,
-      component: resovle => import(`../views/${area}/${view}.vue`).then(resovle),
+      component: resovle => import(`../views/business/${area}/${view}.vue`).then(resovle),
       meta: propMeta,
       props,
       redirect,
@@ -15,7 +15,7 @@ function makeSubRoute(area, path, view, name, propMeta, props, redirect) {
   }
   return {
     path,
-    component: resovle => import(`../views/${area}/${view}.vue`).then(resovle),
+    component: resovle => import(`../views/business/${area}/${view}.vue`).then(resovle),
     meta: propMeta,
     props,
     redirect,
