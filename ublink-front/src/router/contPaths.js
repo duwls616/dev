@@ -19,17 +19,17 @@ export default [
     },
   },
   {
-    path: 'survay',
-    view: 'Survay',
-    name: 'Survay',
+    path: 'survey',
+    view: 'survey',
+    name: 'survey',
     meta: {
       title: '설문진행',
     },
   },
   {
-    path: 'survayresult',
-    view: 'SurvayResult',
-    name: 'SurvayResult',
+    path: 'surveyresult',
+    view: 'surveyResult',
+    name: 'surveyResult',
     meta: {
       title: '설문결과보고',
     },
