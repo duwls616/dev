@@ -201,8 +201,8 @@ export default {
           ICON: 'mdi-note-text-outline',
           MENU_NM: '설문조사',
           SUB: [
-            { ICON: '', MENU_NM: '설문진행', ROUTER: 'survay' },
-            { ICON: '', MENU_NM: '설문 결과보고', ROUTER: 'survayresult' },
+            { ICON: '', MENU_NM: '설문진행', ROUTER: 'survey' },
+            { ICON: '', MENU_NM: '설문 결과보고', ROUTER: 'surveyresult' },
           ],
         },
         {
