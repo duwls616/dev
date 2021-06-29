@@ -189,7 +189,6 @@ import '@/assets/lib/css/ubs.css';
 import BottomNavi from '@/views/components/BottomNavi.vue';
 import LoginExtDialog from '@/views/dialog/LoginExtDialog.vue';
 
-/*eslint-disable */
 export default {
   name: 'Main',
   components: {
@@ -201,34 +200,46 @@ export default {
       isShow: false,
       list: [
         {
-          ICON: 'mdi-home-variant-outline', MENU_NM: '홈', ROUTER: 'dashboard'
+          ICON: 'mdi-home-variant-outline',
+          MENU_NM: '홈',
+          ROUTER: 'dashboard',
         },
         {
-          ICON: 'mdi-animation-play-outline', MENU_NM: '컨텐츠',
-          SUB:[
-            {ICON: '', MENU_NM: "초대장 발송", ROUTER: 'invitation'},
-            {ICON: '', MENU_NM: "설문조사", ROUTER: 'survey'},
-            {ICON: '', MENU_NM: "브로셔", ROUTER: 'brochure'},
-            {ICON: '', MENU_NM: "제품설명회", LEAFSUB: [{ICON: 'mdi-content-copy', MENU_NM: "제품설명회 관리", ROUTER: 'seminar'}, {ICON: 'mdi-account-group', MENU_NM: "신청현황", ROUTER: 'seminarreq'}]},
-          ]
+          ICON: 'mdi-animation-play-outline',
+          MENU_NM: '컨텐츠',
+          SUB: [
+            { ICON: '', MENU_NM: '초대장 발송', ROUTER: 'invitation' },
+            { ICON: '', MENU_NM: '설문조사', ROUTER: 'survey' },
+            { ICON: '', MENU_NM: '브로셔', ROUTER: 'brochure' },
+            {
+              ICON: '',
+              MENU_NM: '제품설명회',
+              LEAFSUB: [
+                { ICON: 'mdi-content-copy', MENU_NM: '제품설명회 관리', ROUTER: 'seminar' },
+                { ICON: 'mdi-account-group', MENU_NM: '신청현황', ROUTER: 'seminarreq' },
+              ],
+            },
+          ],
         },
         {
-          ICON: 'mdi-chart-areaspline', MENU_NM: '리포트',
-          SUB:[
-            {ICON: '', MENU_NM: "전송로그 관리", ROUTER: 'msglog'},
-            {ICON: '', MENU_NM: "채널가입현황", ROUTER: 'chennelmem'},
-            {ICON: '', MENU_NM: "레코드관리", ROUTER: 'mrrecord'},
-          ]
+          ICON: 'mdi-chart-areaspline',
+          MENU_NM: '리포트',
+          SUB: [
+            { ICON: '', MENU_NM: '전송로그 관리', ROUTER: 'msglog' },
+            { ICON: '', MENU_NM: '채널가입현황', ROUTER: 'chennelmem' },
+            { ICON: '', MENU_NM: '레코드관리', ROUTER: 'mrrecord' },
+          ],
         },
         {
-          ICON: 'mdi-cog', MENU_NM: '설정',
-          SUB:[
-            {ICON: '', MENU_NM: "고객관리", ROUTER: 'contmng'},
-            {ICON: '', MENU_NM: "사용자관리", ROUTER: 'usermng'},
-            {ICON: '', MENU_NM: "부서관리", ROUTER: 'deptmng'},
-            {ICON: '', MENU_NM: "그룹권한관리", ROUTER: 'groupauthmng'},
-            {ICON: '', MENU_NM: "고객그룹화", ROUTER: 'contgroupmng'},
-          ]
+          ICON: 'mdi-cog',
+          MENU_NM: '설정',
+          SUB: [
+            { ICON: '', MENU_NM: '고객관리', ROUTER: 'contmng' },
+            { ICON: '', MENU_NM: '사용자관리', ROUTER: 'usermng' },
+            { ICON: '', MENU_NM: '부서관리', ROUTER: 'deptmng' },
+            { ICON: '', MENU_NM: '그룹권한관리', ROUTER: 'groupauthmng' },
+            { ICON: '', MENU_NM: '고객그룹화', ROUTER: 'contgroupmng' },
+          ],
         },
       ],
     },
@@ -332,8 +343,4 @@ export default {
 
 <style scope>
   .theme--light.v-icon:hover {color: #FFFFFF}
-
-  .pop-notice-title { border-top:2px solid #00acc1; font-weight:600; font-size:18px; padding-left:10px; padding-top:10px; }
-  .pop-notice-title-sub { float:left; width:100%; padding-right:10px; padding-left:10px; padding-bottom:5px; padding-top:5px; font-size:12px; }
-  .pop-notice-content { padding:10px; text-align:left; margin-top:40px; min-height:200px; overflow-y:scroll; word-break: keep-all; word-wrap: break-word;}
 </style>

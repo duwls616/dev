@@ -187,7 +187,6 @@ import '@/assets/lib/css/ubs.css';
 import BottomNavi from '@/views/components/BottomNavi.vue';
 import LoginExtDialog from '@/views/dialog/LoginExtDialog.vue';
 
-/*eslint-disable */
 export default {
   name: 'Main',
   components: {
@@ -199,24 +198,27 @@ export default {
       isShow: false,
       list: [
         {
-          ICON: 'mdi-note-text-outline', MENU_NM: '설문조사',
-          SUB:[
-            {ICON: '', MENU_NM: "설문진행", ROUTER: 'survay'},
-            {ICON: '', MENU_NM: "설문 결과보고", ROUTER: 'survayresult'},
-          ]
+          ICON: 'mdi-note-text-outline',
+          MENU_NM: '설문조사',
+          SUB: [
+            { ICON: '', MENU_NM: '설문진행', ROUTER: 'survay' },
+            { ICON: '', MENU_NM: '설문 결과보고', ROUTER: 'survayresult' },
+          ],
         },
         {
-          ICON: 'mdi-book-open-page-variant-outline', MENU_NM: '브로셔',
-          SUB:[
-            {ICON: '', MENU_NM: "브로셔 구독", ROUTER: 'brochure'},
-          ]
+          ICON: 'mdi-book-open-page-variant-outline',
+          MENU_NM: '브로셔',
+          SUB: [
+            { ICON: '', MENU_NM: '브로셔 구독', ROUTER: 'brochure' },
+          ],
         },
         {
-          ICON: 'mdi-presentation', MENU_NM: '제품설명회',
-          SUB:[
-            {ICON: '', MENU_NM: "설명회정보", ROUTER: 'seminarinfo'},
-            {ICON: '', MENU_NM: "모바일초청장", ROUTER: 'seminarinfi'},
-          ]
+          ICON: 'mdi-presentation',
+          MENU_NM: '제품설명회',
+          SUB: [
+            { ICON: '', MENU_NM: '설명회정보', ROUTER: 'seminarinfo' },
+            { ICON: '', MENU_NM: '모바일초청장', ROUTER: 'seminarinfi' },
+          ],
         },
       ],
     },
@@ -289,7 +291,7 @@ export default {
         this.$router.push(`/cont/${id}`);
       }
     },
-    
+
     // 동일 라우터 요청시 오류발생으로 Validation 체크
     routerValidation(id) {
       const curUrl = this.$route.path;
@@ -321,8 +323,4 @@ export default {
 
 <style scope>
   .theme--light.v-icon:hover {color: #FFFFFF}
-
-  .pop-notice-title { border-top:2px solid #00acc1; font-weight:600; font-size:18px; padding-left:10px; padding-top:10px; }
-  .pop-notice-title-sub { float:left; width:100%; padding-right:10px; padding-left:10px; padding-bottom:5px; padding-top:5px; font-size:12px; }
-  .pop-notice-content { padding:10px; text-align:left; margin-top:40px; min-height:200px; overflow-y:scroll; word-break: keep-all; word-wrap: break-word;}
 </style>
