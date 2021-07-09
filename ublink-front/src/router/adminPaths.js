@@ -5,13 +5,6 @@
  */
 export default [
   {
-    path: '',
-    view: 'Dashboard',
-    meta: {
-      requiresAuth: false,
-    },
-  },
-  {
     path: 'dashboard',
     view: 'Dashboard',
     name: 'Dashboard',

@@ -5,6 +5,9 @@ import { UserModule } from './api/user/user.module';
 import { AuthModule } from './api/auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 import { ConfigService } from './shared/services/config.service';
+import { ChannelController } from './channel/channel.controller';
+import { ChannelService } from './channel/channel.service';
+import { ChannelModule } from './channel/channel.module';
 
 @Module({
   imports: [
@@ -16,7 +19,10 @@ import { ConfigService } from './shared/services/config.service';
         configService.typeOrmConfig,
       inject: [ConfigService],
     }),
+    ChannelModule,
   ],
+  controllers: [ChannelController],
+  providers: [ChannelService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): MiddlewareConsumer | void {

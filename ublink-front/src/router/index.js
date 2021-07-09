@@ -4,6 +4,8 @@ import axios from 'axios';
 import store from '@/store';
 import paths from './paths';
 
+Vue.prototype.$axios = axios;
+
 Vue.use(VueRouter);
 
 function makeRoute(path, view, name, area, propMeta, propChildren) {

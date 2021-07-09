@@ -10,12 +10,9 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      '/business': {
-        target: 'https://cloud2.ubsales.co.kr',
+      '/api': {
+        target: 'http://localhost:3080',
         changeOrigin: true,
-        pathRewrite: {
-          '^/business': '',
-        },
       },
     },
   },

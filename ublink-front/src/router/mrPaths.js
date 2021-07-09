@@ -47,7 +47,7 @@ export default [
     view: 'Seminar',
     name: 'Seminar',
     meta: {
-      title: '제품설명회',
+      title: '제품설명회 관리',
     },
   },
   {
