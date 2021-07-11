@@ -27,7 +27,7 @@
   </v-layout>
   <v-layout row wrap>
     <v-flex>
-        <v-list class="ubs-list" flat>
+        <!-- <v-list class="ubs-list" flat>
           <v-list-item-group color="primary">
             <v-list-item v-for="(item, i) in main.list" :key=i>
               <v-list-item-content @click="moveDetail(item);">
@@ -37,11 +37,49 @@
               </v-list-item-content>
             </v-list-item>
           </v-list-item-group>
+        </v-list> -->
+        <v-list
+          three-line
+        >
+          <v-list-item @click="goDetail();">
+            <v-list-item-avatar>
+              <img src="@/assets/lib/img/kakao.png"/>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>박스터</v-list-item-title>
+
+              <v-list-item-subtitle>ID 12345</v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn icon>
+                <v-icon color="grey lighten-1">mdi-information</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
+          <v-divider inset></v-divider>
+          <v-list-item>
+            <v-list-item-avatar>
+              <img src="@/assets/lib/img/kakao.png"/>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+              <v-list-item-title>성보화학</v-list-item-title>
+
+              <v-list-item-subtitle>ID 12345</v-list-item-subtitle>
+            </v-list-item-content>
+
+            <v-list-item-action>
+              <v-btn icon>
+                <v-icon color="grey lighten-1">mdi-information</v-icon>
+              </v-btn>
+            </v-list-item-action>
+          </v-list-item>
         </v-list>
     </v-flex>
   </v-layout>
   <!--플로팅 버튼-->
-  <!-- 추후 정보등록 수정요청처리 화면으로 라우터명 변경 -->
   <v-btn
   class="ubs-function-btn"
   bottom
@@ -59,7 +97,7 @@
 
 <script>
 export default {
-  name: 'ChannelMng',
+  name: 'ChannelList',
   data: () => ({
     page: {
       totCnt: 0, // 리스트 전체 갯수
@@ -77,18 +115,21 @@ export default {
     this.searchChannel();
   },
   methods: {
-    searchChannel(isMore) {
+    async searchChannel(isMore) {
       if (isMore !== 'MORE') {
         this.page.currPage = 1;
         this.main.list = [];
       }
 
-      this.$axios.get('/api/channel')
+      await this.$axios.get('/channel/list')
       .then((response) => {
         this.main.list = response.data;
-      }).catch((ex)=> {
-        console.log('err!!!'+ ex);
-      })
+      }).catch((ex) => {
+        console.log(ex);
+      });
+    },
+    goDetail() {
+
     },
   },
 };

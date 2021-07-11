@@ -1,18 +1,19 @@
 <template>
   <v-app>
     <v-card>
-      <v-card-title class="text-left justify-left py-6 amber--text">
+      <v-card-title class="text-left justify-left py-6 gray--text">
         UBLink
       </v-card-title>
       <v-card-subtitle class="text-right">
       &#91;{{deptNm}}&#93;{{userNm}}
-      <a class="amber--text" @click="logout()">로그아웃</a>
+      <a class="grey--text" @click="logout()">로그아웃</a>
       </v-card-subtitle>
       <v-tabs
-        background-color="amber darken-1"
+        background-color="grey darken-1"
         centered
         grow
         icons-and-text
+        color="#FFFFFF"
       >
         <v-tab :key=i
           v-for="(item, i) in tabs"
@@ -58,7 +59,7 @@
 <script>
 import '@/assets/lib/css/ubs.css';
 import Dashboard from '@/views/business/admin/Dashboard.vue';
-import ChannelMng from '@/views/business/admin/ChannelMng.vue';
+import ChannelList from '@/views/business/admin/ChannelList.vue';
 import AdminRecord from '@/views/business/admin/AdminRecord.vue';
 import Layout from '@/views/business/admin/Layout.vue';
 import BottomNavi from '@/views/components/BottomNavi.vue';
@@ -70,14 +71,14 @@ export default {
     BottomNavi,
     LoginExtDialog,
     Dashboard,
-    ChannelMng,
+    ChannelList,
     AdminRecord,
     Layout,
   },
   computed: {
     bindClass() {
       return {
-        'bg-gray': (this.currVw === 'ChannelMng' || this.currVw === 'AdminRecord' || this.currVw === 'Layout'),
+        'bg-gray': (this.currVw === 'ChannelList' || this.currVw === 'AdminRecord' || this.currVw === 'Layout'),
         'bg-white': this.currVw === 'Dashboard',
       };
     },
@@ -86,7 +87,7 @@ export default {
     currVw: null,
     tabs: [
       { id: 'Dashboard', name: '대시보드', icon: 'mdi-home-variant-outline' },
-      { id: 'ChannelMng', name: '채널관리', icon: 'mdi-animation-play-outline' },
+      { id: 'ChannelList', name: '채널관리', icon: 'mdi-animation-play-outline' },
       { id: 'AdminRecord', name: '레코드', icon: 'mdi-chart-areaspline' },
       { id: 'Layout', name: '레이아웃 이동', icon: 'mdi-cog' },
     ],
@@ -97,7 +98,7 @@ export default {
           ICON: 'mdi-home-variant-outline', MENU_NM: '홈', ROUTER: 'dashboard',
         },
         {
-          ICON: 'mdi-animation-play-outline', MENU_NM: '채널관리', ROUTER: 'channelmng',
+          ICON: 'mdi-animation-play-outline', MENU_NM: '채널관리', ROUTER: 'channellist',
         },
         {
           ICON: 'mdi-chart-areaspline', MENU_NM: '레코드관리', ROUTER: 'adminrecord',
@@ -211,6 +212,6 @@ export default {
 
 <style scope>
   .theme--light.v-icon:hover {color: #FFFFFF}
-  .amber--text {color: #ffb300 !important}
+  .gray--text {color: #424242 !important}
   .white--text {color: #FFFFFF !important}
 </style>

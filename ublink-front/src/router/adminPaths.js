@@ -13,11 +13,11 @@ export default [
     },
   },
   {
-    path: 'channelmng',
-    view: 'ChannelMng',
-    name: 'ChannelMng',
+    path: 'channelist',
+    view: 'ChannelList',
+    name: 'ChannelList',
     meta: {
-      title: '채널관리',
+      title: '채널목록',
     },
   },
   {

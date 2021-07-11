@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3080',
+        target: 'http://cloud2.ubsales.co.kr/ad',
         changeOrigin: true,
       },
     },

@@ -1,6 +1,6 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Query } from '@nestjs/common';
 import { ChannelService } from './channel.service';
-import { Channel } from './entities/channel.entity';
+import { Channel } from 'common/entities/channel.entity';
 
 @Controller('channel')
 export class ChannelController {
@@ -9,7 +9,7 @@ export class ChannelController {
     }
 
     @Get('list')
-    getChannelList() : Channel[] {
-       return this.channelService.getChannelList();
+    getList(@Query("name") channelName : string) : Promise<Channel[]> {
+       return this.channelService.getList();
     }
 }
