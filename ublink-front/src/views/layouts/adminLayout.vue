@@ -1,26 +1,51 @@
 <template>
-  <v-app>
-    <v-card>
-      <v-card-title class="text-left justify-left py-6 gray--text">
-        UBLink
-      </v-card-title>
-      <v-card-subtitle class="text-right">
-      &#91;{{deptNm}}&#93;{{userNm}}
-      <a class="grey--text" @click="logout()">로그아웃</a>
-      </v-card-subtitle>
-      <v-tabs
-        background-color="grey darken-1"
-        centered
-        grow
-        icons-and-text
-        color="#FFFFFF"
-      >
-        <v-tab :key=i
-          v-for="(item, i) in tabs"
-          @click="movePage(item.id)"><v-icon>{{item.icon}}</v-icon>{{item.name}}</v-tab>
-      </v-tabs>
-      <component :is="currVw"></component>
-  </v-card>
+  <v-app id="inspire">
+    <div class="display">
+      <v-spacer></v-spacer>
+      <v-row>
+          <v-col cols="10">
+            <v-row>
+                <v-icon class="white--color">mdi-cube-outline</v-icon>
+                <p style="font-size:25px">
+                  UBLINK
+                </p>
+            </v-row>
+          </v-col>
+          <v-col cols="2">
+            <v-avatar
+              class="hidden-sm-and-down"
+              color="grey darken-1 shrink"
+              size="32"
+              icon
+              outlined
+            >
+            <v-icon color="white">mdi-account</v-icon>
+          </v-avatar>
+          [] <v-icon class="white--color">mdi-logout-variant</v-icon>
+          </v-col>
+      </v-row>
+    </div>
+    <v-app-bar
+      app
+      color="grey lighten-5"
+      style="margin-top:80px"
+      flat
+      fixed
+    >
+      <v-container class="py-0 fill-height">
+        <v-btn
+          v-for="item in lm.list"
+          :key="item"
+          text
+          large
+          style="font-size:15px;padding-right:50px;color:#37474F"
+        >
+          <v-icon left>{{ item.ICON }}</v-icon>{{ item.MENU_NM }}
+        </v-btn>
+
+        <v-spacer></v-spacer>
+      </v-container>
+    </v-app-bar>
 
     <!--[바텀네비게이션]-->
     <BottomNavi
@@ -58,10 +83,6 @@
 
 <script>
 import '@/assets/lib/css/ubs.css';
-import Dashboard from '@/views/business/admin/Dashboard.vue';
-import ChannelList from '@/views/business/admin/ChannelList.vue';
-import AdminRecord from '@/views/business/admin/AdminRecord.vue';
-import Layout from '@/views/business/admin/Layout.vue';
 import BottomNavi from '@/views/components/BottomNavi.vue';
 import LoginExtDialog from '@/views/dialog/LoginExtDialog.vue';
 
@@ -70,27 +91,11 @@ export default {
   components: {
     BottomNavi,
     LoginExtDialog,
-    Dashboard,
-    ChannelList,
-    AdminRecord,
-    Layout,
   },
   computed: {
-    bindClass() {
-      return {
-        'bg-gray': (this.currVw === 'ChannelList' || this.currVw === 'AdminRecord' || this.currVw === 'Layout'),
-        'bg-white': this.currVw === 'Dashboard',
-      };
-    },
   },
   data: () => ({
     currVw: null,
-    tabs: [
-      { id: 'Dashboard', name: '대시보드', icon: 'mdi-home-variant-outline' },
-      { id: 'ChannelList', name: '채널관리', icon: 'mdi-animation-play-outline' },
-      { id: 'AdminRecord', name: '레코드', icon: 'mdi-chart-areaspline' },
-      { id: 'Layout', name: '레이아웃 이동', icon: 'mdi-cog' },
-    ],
     lm: {
       isShow: false,
       list: [
@@ -211,7 +216,12 @@ export default {
 </script>
 
 <style scope>
-  .theme--light.v-icon:hover {color: #FFFFFF}
-  .gray--text {color: #424242 !important}
-  .white--text {color: #FFFFFF !important}
+  .theme--light.v-icon:hover {color: #34acfc}
+  .theme--light.v-btn:hover {color: #34acfc}
+  .gray--text {color: #141318 !important}
+  .white--color {color: #FFFFFF !important}
+  .display{
+    background: #203A43;  /* fallback for old browsers */
+    height:70px;color:white;font-size:20px;
+  }
 </style>
